@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 const PORT = 3002;
+require ("./helpers/dbCon");
 const noteRoutes = require("./routes/noteRoutes");
+
+// common middleware
+app.use(express.json());
 
 // Basic Router
 app.get("/", (req, res) => {

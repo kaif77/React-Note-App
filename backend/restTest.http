@@ -1,1 +1,15 @@
+GET http://localhost:3002/api/notes
+
+
+################################
+
 POST http://localhost:3002/api/notes
+content-type: application/json
+
+{
+    "title": "ABCD3",
+    "description": "React"
+}
+
+################################
+GET http://localhost:3002/api/notes
