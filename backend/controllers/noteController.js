@@ -1,3 +1,5 @@
+const Note = require('../models/noteModel');
+
 // get all notes of the user
 exports.getAllNotesUser = async (req, res) => {
     res.status(200).json("This get all notes of the user");
