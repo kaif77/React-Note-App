@@ -1,0 +1,44 @@
+/* Note Section */
+.note-section{
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Heading */
+.note-section .title{
+    text-align:center;
+    font-size: 1.5rem;
+}
+
+/* deatils */
+.note-section .deatils {
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Note Buttons */
+.note-section .note-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-section .note-buttons .button-custom {
+    margin: 10px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-section .note-buttons .button-custom:hover{
+    background-color:#747d8c !important;
+}

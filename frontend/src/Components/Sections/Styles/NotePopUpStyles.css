@@ -1,0 +1,58 @@
+/* Note popup Section */
+.popup-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(39,37,37,0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-background .note-popup {
+    max-width: max-content;
+    background-color: #747d8c;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-background .note-popup .heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.popup-background .note-popup .textbox-custom {
+    width: 100%;
+}
+
+
+/* Textarea */
+.popup-background .note-popup textarea{
+    resize:none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 80px;
+    min-width: 200px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin: 5px;
+}
+
+.popup-background .note-popup .button-custom {
+    width: 100%;
+}
+.popup-background .note-popup .button-custom:hover {
+    background-color: #ffffff !important;
+    color: #2f3542 !important;
+}

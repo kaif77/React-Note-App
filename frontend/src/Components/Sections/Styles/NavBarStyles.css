@@ -1,0 +1,37 @@
+
+.navbar-section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #70a1ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Search Bar & Menu */
+.search, .menu{
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .button-custom{
+    margin: 0 !important;
+    padding: 10px !important;
+    display: flex !important;
+}
+
+.menu .button-custom:hover{
+    background-color: #747d8c !important;
+}
+
+.menu .button-custom > svg{
+    width: 18px ;
+}

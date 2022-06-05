@@ -1,0 +1,20 @@
+.footer-section{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 20px;
+    background-color: #70a1ff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-section .copy,
+.footer-section .credits{
+    font-size: 0.8rem;
+    color: #2f352f
+}

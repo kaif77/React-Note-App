@@ -1,0 +1,43 @@
+/* Login & Register */
+.login-register-section{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-register-form{
+    width: 100%;
+    max-width: 350px;
+    background-color: #747d8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+.login-register-form .heading{
+    width: 100%;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+/* Textboxes & Buttons */
+.login-register-form .textbox-custom,
+.login-register-form .button-custom{
+    width: 100%;
+}
+
+.login-register-form .button-custom:hover{
+background-color: #ffffff !important;
+color: #2f5542 !important;
+}

@@ -1,0 +1,118 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"); 
+
+/* Reset */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins",sans-serif;
+}
+
+/* Common */
+/* body */
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #70a1ff;
+}
+
+/* Typographic */
+
+h1,h,h3,h4,h5,h5{
+  margin: 5px;
+  color: #2f3542;
+
+}
+
+p,table{
+  margin: 5px;
+  font-size: 0.9rem;
+  color: #2f3542;
+}
+
+a{
+  margin: 5px;
+  text-decoration: none;
+  font-size: 00.9rem;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* svg icons */
+
+svg{
+  margin: 0;
+  color: #ffffff;
+  width: 20px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Homepage Styles*/
+
+.home{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Feed page */
+.feed{
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  background-color: #70a1ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.note-area{
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 150px 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+/* Main button tool Tip */
+.tooltip-custom:hover > span{
+  display: block !important;
+}
+
+
+/* Dark theme */
+/* Feed,Navbar & Footer */
+#dark,
+#dark .navbar-section,
+#dark .footer-section{
+    background-color:#505051;
+}
+
+/* Navbar  */
+#dark .navbar-section .search .textbox-custom{
+  background-color: #ffffff !important;
+  color: #2f3542 !important;
+}
+#dark .navbar-section .menu .button-custom{
+  background-color: #ffffff !important;
+}
+
+#dark .navbar-section .menu .button-custom > svg {
+  color: #2f3542 !important;
+}
+
+#dark .footer-section .credits,
+#dark .footer-section .copy{
+  color: #ffffff;
+}
