@@ -13,3 +13,25 @@ content-type: application/json
 
 ################################
 GET http://localhost:3002/api/notes
+
+################################
+
+POST http://localhost:3002/api/users/register
+content-type: application/json
+
+{
+    "fullName": "Sam William",
+    "email" : "samw@gmail.com",
+    "userName": "samw1234",
+    "password": "samwilliam123"
+}
+
+###############################
+
+POST http://localhost:3002/api/users/login
+content-type: application/json
+
+{
+    "userName": "samw1234",
+    "password": "samwilliam123"
+}

@@ -1,4 +1,4 @@
-const { findById } = require("../models/noteModel");
+// const { findById } = require("../models/noteModel");
 const Note = require("../models/noteModel");
 
 // get all notes of the user
