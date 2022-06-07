@@ -27,13 +27,28 @@ exports.userLogin = async (req, res) => {
     },
     process.env.ACCESS_SECRET_KEY,
     {
-      expiresIn: "1h",
+      expiresIn: "20s",
     }
   );
 
-  return res
-    .status(200)
-    .json({ auth: true, token: accessToken, userId: userByUsername._id });
+  const refreshToken = jwt.sign(
+    {
+      id: userByUsername._id,
+      email: userByUsername.email,
+    },
+    process.env.REFRESH_TOKEN,
+    {
+      expiresIn: "7d",
+    }
+  );
+
+  // Generate refreshToken
+  return res.status(200).json({
+    auth: true,
+    token: accessToken,
+    refreshToken: refreshToken,
+    userId: userByUsername._id,
+  });
 };
 
 // Register user
@@ -72,6 +87,39 @@ exports.userRegister = async (req, res) => {
   } catch (err) {
     return res.json({
       errors: { message: Object.entries(err.errors)[0][1].message },
+    });
+  }
+};
+
+// Renew access token
+exports.renewAccessToken = (req, res) => {
+  const { refreshToken } = req.body;
+//  check if refreshToken is invalid or empty
+  if(!refreshToken){
+    return res.json({errors : { message : "User is not Authenticated"}});
+  }
+
+  // verifiy refreshToken
+  const user = jwt.verify(refreshToken, process.env.REFRESH_TOKEN);
+  
+  // generate new access token
+  if(user) {
+    const accessToken = jwt.sign(
+      {
+        id: user._id,
+        email: user.email,
+      },
+      process.env.ACCESS_SECRET_KEY,
+      {
+        expiresIn: "20s",
+      }
+    );
+
+    return res.status(200).json({
+      auth: true,
+      token: accessToken,
+      refreshToken: refreshToken,
+      userId: user._id,
     });
   }
 };
